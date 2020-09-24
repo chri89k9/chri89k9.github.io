@@ -35,8 +35,8 @@ body {
     text-decoration: none;
     float: left;
   }
+
   
-  /* Change the link color to #111 (black) on hover */
   .menulinks a:hover {
     background-color: #111;
   }
