@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(158, 158, 158);
+    background-color:#6b6a6a;
   }
   
   h1 {
-    color: red;
+    color: white;
     margin-left: 10px;
     outline-color: black;
     outline-style: solid;
@@ -14,7 +14,7 @@ body {
   }
 
   button{
-    background-color:red;
+    background-color: #333;
     color: white;
     padding: 10px 32px;
     text-align: center;
@@ -27,7 +27,7 @@ body {
   }
 
   button:hover{
-    background-color: white;  color: red;
+    background-color: #979797;  color: black;
 
   }
 
@@ -38,6 +38,8 @@ body {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    overflow: hidden;
+    background-color: #333;
   }
 
   .menulinks {
@@ -45,15 +47,6 @@ body {
   }
 
 
-
-
-  .ul1 {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
   
   .menulinks {
     float: left;
