@@ -1,18 +1,28 @@
-let cx=0;
-
+let cx = 0;
+let hastighed = 2;
+let diameter = 50;
+let cz = 0;
 function setup() {
-  createCanvas(600, 600);
+    createCanvas(600, 600);
 }
-
 function draw() {
-  background(220);
-circle(cx, 300, 50);
+    background(220);
+    circle(cx, 300, diameter);
+    circle(300, cz, diameter)
 
-cx=cx+2;
-
-if (cx=width) {
-  cx=cx-1
-}
-
+    if (cx > width - diameter / 2) {
+        hastighed = -2
+    }
+    if (cx < 0 + diameter / 2) {
+        hastighed = 2
+    }
+    cx = cx + hastighed
+    if (cz > height + diameter / 2) {
+        hastighed = -2
+    }
+    if (cz < 0 - diameter / 2) {
+        hastighed = 2
+    }
+    cz = cz + hastighed
 
 }
