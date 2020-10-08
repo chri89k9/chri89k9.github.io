@@ -1,0 +1,17 @@
+.slider {
+    -webkit-appearance: none; /*for at kunne lave manuel css*/
+    width: 47.4%; /*for at styre bredden af barren*/
+    height: 15px; /*højde af barren*/
+    background: #d3d3d3; /*farven på baren*/
+    outline: none; /*fjerner outlinen*/
+  }
+  
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px; /*bredde af knappen*/
+    height: 20px; /*højde af knappen*/
+    border-radius: 20%; /*runde hjørner på knappen*/ 
+    background: #3e65b9; /*farve på knap*/
+  }
+
+  
