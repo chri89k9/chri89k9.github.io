@@ -6,3 +6,4 @@
 - [Stickman](stickboi)
 - [Stickman2](stickboi2)
 - [Bounce](bounce)
+- [Loops1](loops1)
