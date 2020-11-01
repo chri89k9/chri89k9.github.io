@@ -10,4 +10,4 @@
 - [Loops2](loops2)
 - [Loops3](loops3)
 - [LogicalOperators](logicalOperators)
-- [Teknologi](Teknologi - Hjemmeside - Kopi)
+- [Teknologi](tkn)
