@@ -13,6 +13,7 @@ function draw() {
   line(0, height, width, height);
   line(width, 0, width, height);
   circle(mouseX, mouseY, 50);
+  
   //Feltet øverst til venstre
   if(mouseX<=width/2||mouseY<=height/2){
   fill(255, 255, 255)
@@ -22,12 +23,13 @@ function draw() {
   fill(255,0,0)
   }
   //Feltet nederst til venstre
-  if(!!mouseX<=width/2&&mouseY>=height/2){
+  if(!mouseX>=width/2||mouseY>=height/2){
     fill(255,0,0)
   }
   //Feltet nederst til højre
-  if(!mouseX>=width/2&&mouseY>=height/2){
-    (0,0,0)
+  if(mouseX>=width/2&&mouseY>=height/2){
+    fill(255,255,255)
+
   }
 }
 
