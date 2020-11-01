@@ -10,5 +10,5 @@
 - [Loops2](loops2)
 - [Loops3](loops3)
 - [LogicalOperators](logicalOperators)
-- [Teknologi](tkn)
+- [Teknologi](tekno)
 
