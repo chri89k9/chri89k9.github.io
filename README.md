@@ -11,4 +11,4 @@
 - [Loops3](loops3)
 - [LogicalOperators](logicalOperators)
 - [Teknologi](tekno)
-
+- [Parabel](parabel)

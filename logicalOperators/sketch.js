@@ -2,8 +2,6 @@ function setup() {
   createCanvas(400, 400);
 }
 
-
-
 function draw() {
   background(220);
   line(width/2, 0, width/2, height);
@@ -16,21 +14,18 @@ function draw() {
   
   //Feltet øverst til venstre
   if(mouseX<=width/2||mouseY<=height/2){
-  fill(255, 255, 255)
-  }
-  //Feltet øverst til højre
-  if(mouseX>=width/2&&mouseY<=height/2){
-  fill(255,0,0)
-  }
-  //Feltet nederst til venstre
-  if(!mouseX>=width/2||mouseY>=height/2){
+    fill(255, 255, 255)
+    }
+    //Feltet øverst til højre
+    if(mouseX>=width/2&&mouseY<=height/2){
     fill(255,0,0)
+    }
+    //Feltet nederst til venstre
+    if(!mouseX>=width/2||mouseY>=height/2){
+      fill(255,0,0)
+    }
+    //Feltet nederst til højre
+    if(mouseX>=width/2&&mouseY>=height/2){
+      fill(255,255,255)
+    }
   }
-  //Feltet nederst til højre
-  if(mouseX>=width/2&&mouseY>=height/2){
-    fill(255,255,255)
-
-  }
-}
-
-
