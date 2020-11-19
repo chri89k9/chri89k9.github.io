@@ -12,3 +12,4 @@
 - [LogicalOperators](logicalOperators)
 - [Teknologi](tekno)
 - [Parabel](parabel)
+- [Flere farvede bolde](mangebouncyball)
