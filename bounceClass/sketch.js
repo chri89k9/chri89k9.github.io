@@ -1,0 +1,74 @@
+let bolde = new Array(25);
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  for (let i = 0; i < bolde.length; i++) {
+    bolde[i] = new RandomBouncingBall(width / 2, height / 2);
+  }
+}
+
+function draw() {
+  background(220);
+
+  for (let i = 0; i < bolde.length; i++) {
+    const b = bolde[i];
+    b.render();
+    b.update();
+    // bolde[i].render();
+    // bolde[i].update();
+  }
+}
+
+class Ball {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.r = random(5, 100)
+
+    const sMax = 20
+    this.speedX = random(-sMax, sMax)
+    this.speedY = random(-sMax, sMax)
+  }
+
+  update() {
+    this.x += this.speedX
+    this.y += this.speedY
+  }
+
+  render() {
+    circle(this.x, this.y, this.r * 2);
+  }
+}
+
+class BouncingBall extends Ball {
+  update() {
+    super.update()
+
+    if (this.x + this.r > width || this.x - this.r < 0) {
+      this.speedX = -this.speedX
+    }
+
+    if (this.y + this.r > height || this.y - this.r < 0) {
+      this.speedY = -this.speedY
+    }
+  }
+}
+
+class RandomBouncingBall extends BouncingBall {
+
+  constructor(x, y) {
+    super(x, y)
+    this.sw = random(1, 10);
+
+    const red =  random(0, 255)
+    const green =  random(0, 255)
+    const blue =  random(0, 255)
+    this.color = color(red, green, blue)
+  }
+
+  render() {
+    strokeWeight(this.sw);
+    fill(this.color)
+    super.render()
+  }
+}
