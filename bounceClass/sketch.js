@@ -1,74 +1,48 @@
-let bolde = new Array(25);
-
+let balls = new Array(2);
+ 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  for (let i = 0; i < bolde.length; i++) {
-    bolde[i] = new RandomBouncingBall(width / 2, height / 2);
+  for (let i = 0; i < balls.length; i++) {
+    let d = random(50, 120)
+    balls[i] = new RandomBall(random(width - d, 0 + d), random(height - d, 0 + d));
   }
 }
-
+ 
 function draw() {
   background(220);
-
-  for (let i = 0; i < bolde.length; i++) {
-    const b = bolde[i];
+  for (let i = 0; i < balls.length; i++) {
+    const b = balls[i]
     b.render();
     b.update();
-    // bolde[i].render();
-    // bolde[i].update();
   }
 }
-
-class Ball {
+ 
+class RandomBall {
   constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.r = random(5, 100)
-
-    const sMax = 20
+    this.x = x
+    this.y = y
+    this.d = random(200, 220)
+    const sMax = 5
     this.speedX = random(-sMax, sMax)
     this.speedY = random(-sMax, sMax)
+    this.color = color(random(0, 255), random(0, 255), random(0, 255))
   }
-
   update() {
-    this.x += this.speedX
-    this.y += this.speedY
-  }
-
-  render() {
-    circle(this.x, this.y, this.r * 2);
-  }
-}
-
-class BouncingBall extends Ball {
-  update() {
-    super.update()
-
-    if (this.x + this.r > width || this.x - this.r < 0) {
+    this.x += this.speedX;
+    this.y += this.speedY;
+ 
+    if (this.x + this.d / 2 > width || this.x - this.d / 2 < 0) {
       this.speedX = -this.speedX
     }
-
-    if (this.y + this.r > height || this.y - this.r < 0) {
+    if (this.y + this.d / 2 > height || this.y - this.d / 2 < 0) {
       this.speedY = -this.speedY
     }
   }
-}
-
-class RandomBouncingBall extends BouncingBall {
-
-  constructor(x, y) {
-    super(x, y)
-    this.sw = random(1, 10);
-
-    const red =  random(0, 255)
-    const green =  random(0, 255)
-    const blue =  random(0, 255)
-    this.color = color(red, green, blue)
-  }
-
   render() {
-    strokeWeight(this.sw);
+    circle(this.x, this.y, this.d)
     fill(this.color)
-    super.render()
+    // fill(random(255),random(255),random(255))
   }
 }
+
+//Map function
